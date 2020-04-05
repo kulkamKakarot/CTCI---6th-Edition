@@ -29,6 +29,6 @@ public class StringCompression2 {
                 count = 0;
             }
         }
-        return cstr.toString();
+        return cstr.length() < str.length() ? cstr.toString() : str;
     }
 }
