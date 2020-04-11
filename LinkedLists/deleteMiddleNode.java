@@ -1,5 +1,12 @@
 /* This solution is one of many examples of my hyperactivity, never read that i have access to the node 
 which is going to be deleted, not the head node*/
+/*boolean(Node n){
+    if(n == null || n.next == null){ return false; }
+    Node next = n.next;
+    n.data = next.data;
+    n.next = next.next;
+    return true;     
+*/
 package StringRotation.LinkedLists;
 public class deleteMiddleNode {
     Node head;
