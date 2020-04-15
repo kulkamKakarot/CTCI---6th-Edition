@@ -13,6 +13,9 @@ public class palindrome {
     }
 
         boolean isPalin(node n){
+             if(n == null){
+                     return true;
+             }
             Stack<Integer> stack = new Stack<Integer>();
             int count=0;
             node dummy = n;
