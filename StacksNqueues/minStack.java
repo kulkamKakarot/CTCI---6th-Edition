@@ -1,4 +1,4 @@
-package StringRotation.StacksNqueues;
+
 
 import java.util.Stack;
 

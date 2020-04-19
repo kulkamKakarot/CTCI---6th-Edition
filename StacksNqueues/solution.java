@@ -1,4 +1,4 @@
-package StringRotation.StacksNqueues;
+
     class solution{
     static class MyQueue {
         int data;
