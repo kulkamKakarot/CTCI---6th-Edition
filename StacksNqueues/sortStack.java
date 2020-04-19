@@ -1,20 +1,16 @@
 import java.util.Stack;
 
-/**
- * sortStack
- */
 public class sortStack {
-
     Stack<Integer> sort(Stack<Integer> s){
         Stack<Integer> newStack = new Stack<>();
-        while(!s.empty()){
-            int temp = s.pop();
-            while(!newStack.empty() && newStack.peek() > temp){
-                s.push(newStack.pop());
+        while(!s.empty()){ //pushing large values into 2nd stack
+            int temp = s.pop();      //holding in temp variable
+            while(!newStack.empty() && newStack.peek() > temp){  //if value larger than the temp value
+                s.push(newStack.pop());                             //push to stack one
             }
-            newStack.push(temp);
+            newStack.push(temp);                      //if second stack value smaller than temp value push to top 2nd stack
         }
-        while (!newStack.empty()) {
+        while (!newStack.empty()) {                 //push decreasing order into stack one 
             s.push(newStack.pop());
         }
         return s;
