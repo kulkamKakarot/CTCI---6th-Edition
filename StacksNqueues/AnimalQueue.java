@@ -2,6 +2,7 @@ import java.util.LinkedList;
 abstract class Animal{
     private int order;
     protected String name;
+    public abstract String name();
     public Animal(String n){
         name = n;
     }
@@ -61,10 +62,18 @@ class Dog extends Animal{
     public Dog(String n){
         super(n);
     }
+    
+    public String name() {
+        return "Dog: " + name;
+    }
 }
 
 class Cat extends Animal{
     public Cat(String n) {
         super(n);
+    }
+    
+    public String name() {
+        return "Cat: " + name;
     }
 }
