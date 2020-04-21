@@ -20,11 +20,11 @@
         
         /** Removes the element from in front of queue and returns that element. */
         public int pop() {
-            int item;
             while(stack1 != null){
                 System.out.println("stack1  "+stack1.data);
                 stack1 = stack1.next;
             }
+            int item;
             MyQueue dummy = new MyQueue(0);
             if(stack2 == null){
                 while(stack1 != null){
@@ -33,7 +33,7 @@
                     dummy.next = stack2;
                     System.out.println(dummy.next.data+"<- dummy node ");
                 }
-                item = dummy.next.data;
+                 item = dummy.next.data;
                 dummy.next = dummy.next.next;
                 }
             dummy.next = stack2;
