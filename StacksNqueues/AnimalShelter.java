@@ -10,7 +10,7 @@ public class AnimalShelter{
         animals.enQueue(new Dog("Dexter"));
         animals.enQueue(new Dog("Dobo"));
         animals.enQueue(new Cat("Copa"));
-        
+
         System.out.println(animals.deQueueAny().name());
         System.out.println(animals.deQueueAny().name());
         System.out.println(animals.deQueueAny().name());
@@ -18,7 +18,8 @@ public class AnimalShelter{
         animals.enQueue(new Dog("Dapa"));
         animals.enQueue(new Cat("Kilo"));
 
-        
-
+        while (animals.dogs.size() != 0 || animals.cats.size() !=0) {
+            System.out.println(animals.deQueueAny().name());
+        }
     }
 }
