@@ -40,13 +40,13 @@ class Solution2 {
         if(node == null)  return -1;
         
         int left = height(node.left);
-        if(left == Integer.MIN_VALUE)  return Integer.MIN_VALUE;
+        if(left == Integer.MIN_VALUE)  return Integer.MIN_VALUE; //pass error up
         int right = height(node.right);
-        if(right == Integer.MIN_VALUE)  return Integer.MIN_VALUE;
+        if(right == Integer.MIN_VALUE)  return Integer.MIN_VALUE;  //pass error up
         int diff = left - right;
         
         if(Math.abs(diff) > 1){
-            return Integer.MIN_VALUE;
+            return Integer.MIN_VALUE;  //found error --> pass it back
         }else{
             return Math.max(left, right) + 1;
         }
