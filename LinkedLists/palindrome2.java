@@ -19,8 +19,13 @@ public class palindrome2 {
         node head = null;
         while(n != null){
             node node = new node(n.data);
+<<<<<<< HEAD
             node.next = head; //appending head to last of node.data
             head = node; //backing the pointer head to first node
+=======
+            node.next = head; //appending to last
+            head = node; //backing the pointer to first node
+>>>>>>> c43b86aef218106244aae96b3881472fffcc82fa
             n = n.next;
         }
         return head;
@@ -44,7 +49,11 @@ public static void main(String[] args) {
     head = new node(1);
     head.next = new node(2);
     head.next.next = new node(3);
+<<<<<<< HEAD
     head.next.next.next = new node(2);  
+=======
+    head.next.next.next = new node(2);  // part 1 node(2)
+>>>>>>> c43b86aef218106244aae96b3881472fffcc82fa
     head.next.next.next.next = new node(1);
 
     boolean b = p.isPalin(head);

@@ -1,12 +1,14 @@
 /* This solution is one of many examples of my hyperactivity, never read that i have access to the node 
 which is going to be deleted, not the head node*/
-
-
-
+/*boolean(Node n){
+    if(n == null || n.next == null){ return false; }
+    Node next = n.next;
+    n.data = next.data;
+    n.next = next.next;
+    return true;     
+*/
 package StringRotation.LinkedLists;
-
 public class deleteMiddleNode {
-
     Node head;
     static class Node{
          int data;
@@ -17,7 +19,6 @@ public class deleteMiddleNode {
             this.next = null;
         }
     }
-
     void deleteMiddle(int n){
         Node current = head;
         int count = 0;
@@ -32,7 +33,6 @@ public class deleteMiddleNode {
         }
         System.out.println(current.data);
     }
-
     void show(){
         Node node = head;
         System.out.println();
@@ -43,7 +43,6 @@ public class deleteMiddleNode {
         }
         System.out.print(node.data);
     }
-
     public static void main(String[] args) {
         deleteMiddleNode k = new deleteMiddleNode();
             k.head = new Node(6);
@@ -57,8 +56,6 @@ public class deleteMiddleNode {
             k.show();
             System.out.println();
             System.out.println("Linked List AFTER deleting the 2nd element");
-            k.deleteMiddle(3);
-            
+            k.deleteMiddle(3);            
     }
-
 }
