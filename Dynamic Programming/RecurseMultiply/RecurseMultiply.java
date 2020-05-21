@@ -1,5 +1,7 @@
+package RecurseMultiply;
+
 /**
- * RecurseMultiply
+ * RecurseMultiply naive approach
  */
 public class RecurseMultiply {
 
@@ -27,7 +29,7 @@ public class RecurseMultiply {
         }
 
     public static void main(String[] args) {
-        long n = recurseMultiply(299977,293333);
+        long n = recurseMultiply(299977,293333);//87993153341
         System.out.println(n);
     }
 }
