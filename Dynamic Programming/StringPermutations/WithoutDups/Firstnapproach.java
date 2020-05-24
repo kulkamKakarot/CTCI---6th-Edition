@@ -17,7 +17,7 @@ public class Firstnapproach {
         String remainder = str.substring(1);
         ArrayList<String> words = getPerms(remainder);
         for (String word : words) {
-            for (int i = 0; i < word.length(); i++) {
+            for (int i = 0; i <= word.length(); i++) {
                 String s = insertCharAt(word,first,i);
                 permutations.add(s);
             }
